@@ -1,0 +1,24 @@
+{
+  "name": "translator_homepage",
+  "version": "1.0.0",
+  "description": "simple homepage for a translation buero",
+  "keywords": [
+    "express",
+    "html",
+    "css",
+    "react"
+  ],
+  "license": "ISC",
+  "author": "Shero Ose",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "ejs": "^4.0.1",
+    "express": "^5.2.1",
+    "react": "^19.2.3"
+  }
+}
