@@ -73,7 +73,7 @@ main {
 .overlay-logo {
   position: absolute;
   bottom: 30px;
-  right: 40px;
+  right: 20px;
   height: 80px;
   border-radius: var(--border-radius-lg);
   background-color: rgba(255, 255, 255, 0.9);
@@ -169,6 +169,126 @@ main {
   position: relative;
 }
 
+.image-section {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg);
+  margin: var(--spacing-lg) 0;
+  padding: var(--spacing-md);
+  background-color: rgba(26, 47, 74, 0.02);
+  border-radius: var(--border-radius-md);
+}
+
+.image-section.reverse {
+  flex-direction: row-reverse;
+}
+
+.image-content {
+  flex: 1;
+}
+
+.image-content h3 {
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-bottom: var(--spacing-sm);
+  color: var(--header-blue);
+}
+
+.image-content p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-color);
+}
+
+.section-image {
+  width: 350px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: var(--border-radius-md);
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.section-image:hover {
+  transform: translateY(-3px);
+}
+
+.image-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-md);
+  margin: var(--spacing-lg) 0;
+}
+
+.gallery-item {
+  text-align: center;
+  background-color: rgba(26, 47, 74, 0.02);
+  padding: var(--spacing-sm);
+  border-radius: var(--border-radius-md);
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(-2px);
+}
+
+.gallery-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: var(--border-radius-sm);
+  margin-bottom: var(--spacing-xs);
+}
+
+.gallery-item p {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--header-blue);
+  margin: 0;
+}
+
+.text-section {
+  background-color: rgba(26, 47, 74, 0.03);
+  border-left: 4px solid var(--header-blue);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-md);
+  margin: var(--spacing-lg) 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.text-section:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-soft);
+}
+
+.text-section h3 {
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-bottom: var(--spacing-md);
+  color: var(--header-blue);
+}
+
+.text-section p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-color);
+  margin-bottom: var(--spacing-sm);
+}
+
+.text-section p:last-of-type {
+  margin-bottom: var(--spacing-md);
+}
+
+.text-section blockquote {
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--header-blue);
+  border-left: 3px solid var(--footer-blue);
+  padding-left: var(--spacing-sm);
+  margin: var(--spacing-md) 0 0 0;
+  opacity: 0.9;
+}
+
 footer {
   background-color: var(--footer-blue);
   padding: var(--spacing-lg) var(--spacing-md);
@@ -214,7 +334,7 @@ footer {
 
   .overlay-logo {
     bottom: 15px;
-    right: 20px;
+    right: 10px;
     height: 60px;
     padding: 6px;
   }
@@ -239,6 +359,41 @@ footer {
     flex-direction: column;
     text-align: center;
     gap: var(--spacing-md);
+  }
+
+  .image-section,
+  .image-section.reverse {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--spacing-md);
+  }
+
+  .section-image {
+    width: 100%;
+    max-width: 300px;
+    height: 200px;
+  }
+
+  .image-gallery {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: var(--spacing-sm);
+  }
+
+  .gallery-image {
+    height: 120px;
+  }
+
+  .text-section {
+    padding: var(--spacing-sm);
+    margin: var(--spacing-md) 0;
+  }
+
+  .text-section h3 {
+    font-size: 1.3rem;
+  }
+
+  .text-section blockquote {
+    font-size: 1rem;
   }
 
   .content-image::before {
@@ -271,7 +426,7 @@ footer {
 
   .overlay-logo {
     bottom: 25px;
-    right: 30px;
+    right: 15px;
     height: 70px;
     padding: 6px;
   }
@@ -291,6 +446,32 @@ footer {
   .content-image {
     width: 250px;
     height: 170px;
+  }
+
+  .section-image {
+    width: 280px;
+    height: 200px;
+  }
+
+  .image-gallery {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+
+  .gallery-image {
+    height: 140px;
+  }
+
+  .text-section {
+    padding: calc(var(--spacing-sm) + 0.5rem);
+    margin: calc(var(--spacing-lg) - 0.5rem) 0;
+  }
+
+  .text-section h3 {
+    font-size: 1.4rem;
+  }
+
+  .text-section blockquote {
+    font-size: 1.05rem;
   }
 }
 
